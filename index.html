@@ -120,12 +120,18 @@
 
                     var canvas = document.querySelector("canvas");
                     $(canvas).show();
-                    canvas.width = image.width;
-                    canvas.height = image.height;
+                    var scaleFactor = 4; // Desired scale factor (e.g., 2 for doubling the size)
+                    var newWidth = image.width * scaleFactor;
+                    var newHeight = image.height * scaleFactor;
+
+                    canvas.width = newWidth;
+                    canvas.height = newHeight;
+
+                
 
                     var context = canvas.getContext("2d");
 
-                    context.drawImage(image, 0, 0);
+                    context.drawImage(image, 0, 0,newWidth,newHeight);
 
                     var a = document.createElement("a");
                     a.download = "ua-map.png";
