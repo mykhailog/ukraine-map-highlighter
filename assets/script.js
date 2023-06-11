@@ -1,5 +1,5 @@
 $(function () {
-    var COLORS = ["rgb(255, 223, 73)", "rgb(202, 164, 206)", "rgb(165, 189, 227)", "rgb(198, 216, 110)", "rgb(113, 189, 134)", "white", "rgb(245, 177, 167)", "rgb(255, 239, 71)", "rgb(43, 42, 41)"];
+    var COLORS = ["rgb(255, 223, 73)", "rgb(202, 164, 206)", "rgb(165, 189, 227)", "rgb(198, 216, 110)", "rgb(113, 189, 134)", "white", "rgb(255, 239, 71)", "rgb(43, 42, 41)"];
     var $regions = $("#map #oblasts > path");
     var $regionsWithLabels = $("#map #oblasts > path, #map .oblast-labels text");
     // var $labels = $("#map .regions  g > path , #map .regions  .label");
