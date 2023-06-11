@@ -1,0 +1,187 @@
+html, body {
+    margin: 0px;
+    padding: 0;
+    background: #e8eaed;
+    height: 100vh;
+    overflow: hidden;
+}
+
+html {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    /*-moz-user-select: -moz-none;*/
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+
+}
+
+/*#map*/
+/*{*/
+/*        padding-top: 45px;*/
+/*}*/
+#map svg {
+
+    /*max-width: 100%;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*display: block;*/
+    margin-left: 45px;
+    height: 95vh;
+
+}
+
+#map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#map .regions path, #map .regions polygon {
+
+    cursor: pointer;
+}
+
+#map .regions path:hover, #map .regions polygon:hover {
+
+    opacity: 0.7;
+}
+
+#map .regions path polygon {
+    display: none;
+}
+
+#map .deleted {
+    display: none;
+}
+
+#options svg {
+    height: 32px;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+#options {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    position: fixed;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.16);
+    width: 45px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 200;
+}
+
+#options > * {
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: center;
+    /*height: 100%;*/
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#options label:hover, #options a:hover {
+    opacity: 0.7;
+}
+
+#options label:active, #options a:active {
+    opacity: 0.5;
+}
+
+
+#colors .color {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    cursor: pointer;
+
+    /*margin-right:5px;*/
+    border-radius: 25px;
+    /*outline:1px black solid ;*/
+    box-shadow: 0px 0px 1px black;
+
+}
+
+#colors .color.selected {
+    outline: 1px black solid;
+}
+
+@media all and (max-width: 767px) {
+    body #options {
+        bottom: auto !important;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100vw;
+        height: 10vw;
+        text-align: left !important;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        background: white;
+
+    }
+
+    body #map svg {
+        /*height:50vh !important;*/
+        margin-left: 0 !important;
+        margin-top: -10vw !important;
+        width: 100%;
+    }
+
+    body #map {
+        position: fixed;
+        top: 12vw;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
+    .desktop-only {
+        display: none !important;
+    }
+
+    /*body #colors {*/
+    /*  width: 100vw;*/
+    /*}*/
+    body #colors .color {
+        width: 8vw;
+        height: 8vw;
+        border-radius: 0;
+        margin-left: 1vw;
+    }
+
+    body #options svg {
+        height: 8vw;
+    }
+
+    body #options label, body #options a {
+        width: 8vw;
+        display: inline-block;
+        margin-left: 1vw;
+        text-align: center;
+    }
+
+    #options > * {
+        text-align: left;
+        width: auto !important;
+    }
+}
