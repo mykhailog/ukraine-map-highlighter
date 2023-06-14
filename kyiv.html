@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <!-- Primary Meta Tags -->
+    <title>Інтерактивна мапа Києва</title>
+    <meta name="title" content="Інтерактивна мапа Києва">
+    <meta name="description" content="Відмічайте райони Києва, в яких Ви були та діліться з друзями.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uamap.ukrzen.in.ua/kyiv">
+    <meta property="og:title" content="Інтерактивна мапа Києва">
+    <meta property="og:description" content="Відмічайте райони Києва, в яких Ви були та діліться з друзями.">
+    <meta property="og:image" content="https://uamap.ukrzen.in.ua/assets/cover-kyiv.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://uamap.ukrzen.in.ua/kyiv">
+    <meta property="twitter:title" content="Інтерактивна мапа Києва">
+    <meta property="twitter:description" content="Відмічайте райони Києва, в яких Ви були та діліться з друзями.">
+    <meta property="twitter:image" content="https://uamap.ukrzen.in.ua/assets/cover-kyiv.jpg">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="assets/style.css" rel="stylesheet"/>
+    <script src="assets/script.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YCS8KCQ8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-2YCS8KCQ8M');
+    </script>
+</head>
+
+<body>
+<div id="options">
+
+    <div id="colors"></div>
+    <a class="clearAll" href="#" title="Очистити">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+        </svg>
+    </a>
+
+    <label class="toggleLabels" title="Відображати назви">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M254 52.8C249.3 40.3 237.3 32 224 32s-25.3 8.3-30 20.8L57.8 416H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32h-1.8l18-48H303.8l18 48H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H390.2L254 52.8zM279.8 304H168.2L224 155.1 279.8 304z"/>
+        </svg>
+    </label>
+    <!--    <label class="toggleBorder" title="Відображати кордони областей"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">&lt;!&ndash;! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. &ndash;&gt;<path d="M32 480a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm96-64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm0-384a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm0 256a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM320 416a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm0-320a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm0 128a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM224 480a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm0-448a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm0 256a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM416 416a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm0-384a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM32 96a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM416 224a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM32 288a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm192 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm192 64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM32 320a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM416 192a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM32 128a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm192 64a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"/></svg></label>-->
+
+    <!--    <a class="saveSVG" href="#">SVG</a>-->
+
+    <a class="copyClipboard desktop-only" href="#" title="Зберегти в буфер">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+            <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M272 0H396.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128H192v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+        </svg>
+    </a>
+
+    <a class="savePNG desktop-only" href="#" title="Зберегти як файл">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+        </svg>
+    </a>
+</div>
+
+<div id='map'>
+    <svg xmlns="http://www.w3.org/2000/svg" class="small" width="658" height="640" version="1.1">
+        <style>
+            text {
+                font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+            }
+        </style>
+        <g id="oblasts">
+             <path fill="white"  d="m490 290-14 3-72 27-30-45-8-7-17-14-1-2-2-12 5-11 10-12-8-18 4-2h29l37-2 4 15-6 9 7 14 12 7 7 20-2 6 7 3 6-3 4 3 3 8 8-7 3 3 3-14-7-3-1-13 90-40 7 3-1 12-3 9 5 6-7 8-38 36z" data-oblast="Дніпровський" opacity="1"/>
+            <path fill="white"  d="m421 413 8 15 4 1-9 4-4 3 4 6v6l-7-10-15-19-5-20v-6l2-14 6-14 4-25h6l4 1-2-4-6-1-7-16 72-27 14-3 34-13 38-36 8-1v12l2 3-12 4 13 11 6 5v2l16 7-1 8 15 7 6 9 6 10-8 9 10 11 12 2 8 9-5 3-7 16-15-2-9-6-1-3-15 5-2 10 5 4-4 6h-8l6 6-1 6 2 5-18-2-12 4-18-9v-3l-8-10-7 7-2 5v2h-1v2l4 3-1 6h-2l-1-2-3 7 6 11v2l-1 1v1l-17 12-2-2v-1l-15-9-4 2-2-2v-4l1-2-2-4-6 2-22 3v-9l-11-1-6 4z" data-oblast="Дарницький" opacity="1"/>
+            <path fill="white" d="m473 270-8 7-3-8-4-3-6 3-7-3 2-6-7-20-12-7-7-14 6-9-4-15-37 2h-29l-4 2-3-8v-26l4-12 1-3 2-2 2 3 13 1 5 8h6l-1-14-13-15 6-7 99 11 2-7 5-10 2-9 5-4 10-1 20-13 2 13 15-3-3-32 12-14-4-9h12l23 12h16l4 13 10-1 3-4 12 15 22 8-4 3v8l3 2 5 33-4 3-10 2-12 6-12 2-21 13 3 2-4 6-6-8-6 1v3l6 2 3 11-15 7 3 4h-6l-8 6 3 7 1 1-90 40 1 13 7 3-3 14z" data-oblast="Деснянський" opacity="1"/>
+            <path fill="white"  d="m437 626-55 4 4-41-9-17h-21l-3-4 4-12-12-11 4-8v-15l-18-2 8-14-4-6 4-23-19-5-8-8-10 6-10-10 6-3 3-5-10-6-1 4-12 3v-7l6-5h-4l-3-16 4-3v-7h-4l-4-7-10-4-6 13-13-4-4-6 3-13-7-6 13-16 4-6 4-2 4 4 1-2 1-4 5-2v-4h13l2-6-6-1 5-4 8 4 6-6 5-12 3-2 12-1-8-12 4-7 6-1 8 8-6-18-14-15 6-5 15 5 1 24 9 19-3 7 38 10 11-14 10-4 1 42-6 38 22 30 25 46 13 25 3 20-2 16-33-3v8l5 7 2 13 8 2 1 11 5 9z" data-oblast="Голосіївський" opacity="1"/>
+            <path fill="white"  d="m290 349-8-4-5 4 6 1-2 6h-13v4l-5 2-1 4-1 2-4-4-4 2-4 6-15-17h-3l-3-6-5-6 9-10 9-12-9 2-26-49 3-6 15-14 2-7 48 15 4 8 10-2 18 15 14 15 6 18-8-8-6 1-4 7 8 12-12 1-3 2-5 12z" data-oblast="Соломянський" opacity="1"/>
+            <path fill="white"  d="m383 329-11 14-38-10 3-7-9-19-1-24 6-7 1-6 6-9v-4l7-1 19 14 11 14 9 26 7 15z" data-oblast="Печерський" opacity="1"/>
+            <path fill="white"  d="m241 321-9 12-9 10-22-11-26-27-9-20-1-16-7-4v-3l-3 4-22 4h-17l-28-10v9l-9 16 2 2-7 7-7-8h-7l-3 6-10 8-7-13 7-8-1-4 3-2h1l-1-9-6-10 21-29-1-4-7-6 3-5-2-4 3-10 7 3 8-10-1-3 5-7-1-9-9-10 16-17h7l10-10-1-2v-3l3-4h9l3-16-2-8 60 56 2 26 31 21-2 45 21-1-2 7-15 14-3 6 26 49z" data-oblast="Святошинський" opacity="1"/>
+            <path fill="white"  d="m327 283-15-5-6 5-18-15-10 2-4-8-35-11-13-4-21 1 2-45 15 14 17 2 8-14 17-1 5 8 7-2 2 3-3 3 4 3 7-5 2 4 9 1v8l6 1 3 10 13 1 3 13 8-4 8 3 5 5-3 1v4l-6 9-1 6z" data-oblast="Шевченківський" opacity="1"/>
+            <path fill="white"  d="m239 219-17-2-16-14-30-21-2-26 36-13 56-4-4 9 2 33 22 21 9 1 13 17 6-8h23l8-1 4 1 5-1 2 6-15 21 5 18h-3l-5-5-8-2-8 3-3-13-13-1-3-10-6-1v-8l-9-1-2-4-7 5-4-3 3-3-2-3-7 2-5-8-17 1z" data-oblast="Подільський" opacity="1"/>
+            <path fill="white"  d="m210 143-36 13-59-56-7-7 4-4 3 4 9-4 15 16 1-7 5-4v-6l11-1-10-3-7-6 2-3-19-12 37-4 27 2-1-11v-6l3-2 79 3 14 4v11l10 2v6h9l2 8h13l5 25 32 30 2 12-7 20 2 16-1 16 6 16h-1l-4 1-4-1-8 1h-23l-6 8-13-17-9-1-22-21-2-33 4-9z" data-oblast="Оболонський" opacity="1"/>
+            <path  d="m473 528-11-8v-2l10 5-1 2z"/>
+        </g>
+        <path style="fill:rgb(14,65,141)"  d="m534 585-1-8-8-7v-4h5l-7-10 3-5-5-3-2 4-7 3-9-9 2 5-6-10-5-1v-11h-9l-1 6h-2l-2-6-2-1v-19l-1-3-2-1 1-7-1-6-5 3 2-8 1-2-5-6-1 5h-6v3l-2 1v2h1v4h-2l3 9 1 6 3 3 5-3 5 11-7-2-5-3-6-10-10-19-8-9-1-3-4-19-9-13h-2v4l4 4 3 5 5 16 1 4 3 4 7 9 8 18-22-35-4-15-5-8-6-10-15-19-5-20v-6l2-14 6-14 4-25h6l4 1-2-4-6-1-7-16v-33l-4-3 1-11-5-17-9-19-5 3 2 4h-4l-11-15-1-17 6-3 1-1 6-6 2-4 1-22-5-13 1-2-3 3 1 5v1l-9 5 6-2 5 1v3l-8 4h5l-3 3 4 6h3v2l-2 3-6 8-3-14-2-6-8 11 7 7 4 5-4 4-1-4-2 10v5l3 11 1 5 7 8 2 3 4 20v4h5l-4-16v-9l3-2 2 2v2l1 2 6 7v10l4 5-1 14 4 2v6l-1 2 1 5-12-11-12-21-12-20-4 2 6 8 7 10v6l-8-9-17-13-1-2-3-12 6-11 10-13-11-25v-26l4-12 1-3 7-8-5-12-8-8-2-9 4-5h2l1 1h5l7-1 9 5 8 1h4l4-1 1-7-9-5-5-7 6-6 10 4h6l8-6 5-7 1-9-6-5-12-5-2-5 7-3 16-9 10 3 6 7 4-1 10-6 14-5 7-5V26l4-4-6 2-8-1-4-6 2-4h26l9 9-2-8 13 9 26-4 12-4-3-4-8 4 4-9-5-5h-6l8 6-3 7-4-2-3 4-4-1h-4v3h-9l-4-5h3l-3-6-2-1h-2l1 6-5-3-27-1 2-2h-10l-9 7 2 7 14 11v3l-7 5-13 4-7 6-5-4-3-5-6-3-14 5-17 12v6l8 3 11 6v4l-3 2-3 7-6 6-5 1-5-3-9-1-5 6 1 5 1 3 7 6 2 3v3h-4l-5-1-7-6-7-1h-4l-2-3-2-6-5-11 11-7 5 5-3-11-3-4-1-5 7-4v-5l5-9v-9l-2-4-1-15-4-1 3 22v3l-5 10-7 8-1 1v2l4 1-1 6 3 3-10 10-3-5-2-5-1-12 4 9-2-10 3-3-2-4h-8l-2 5-5-3 4-8 12 2 7-6 2-11V15l-3-14h-45l4 6 4 13 7 8-1 11 5 2-10 10-9 21 5 2-5 10 4 12 5 12 14 9 15 10 4 4 3 12-5 8-6 9 3-9 2-14-6 1-3 2v22h4l-3 5-1 13-3-7v-5l2-5-4-3-2 5-3 2 3 15 5 2 7-6 3-6 2 5-4 8 3 7-6 5 6 6v3l5 3 3 7-13 17-2-4-5-6 3-8-5 6-3-1 3-4-4 2h-4l-3-3-8-3 1 7 1-2h7v5l7 1 6 8 5 21 16 12 12 11 6 9 5 14 5 12-4 2v5l6 2 4 7 1 18-2 12v14l-2 14-5 9-1 4 1 8-4-3 2-5-5-5-3 4 2 3-2 1h-2l-2-4-6-5-2 3 8 7 8 5 5 4-2 6 8 10h8l12 8 1 8-11-5-5-9-5 1 6 8 19 9 6 9 12 21v5h-2v-4l-2-5-4-1 1 4-4-3 1-4-2 1-1-3-4 2v4l3 5 7 8 5 3 16 15v1l-8 2-1-4-3 3-4 1 7 3h-8l-4-6-2-6-6-3 1-10-4 10-6-5-4-5v-8l-2 10 16 13 6 8-2 1 7 5 13 3 6 5 1 10-4 6 6 5-5 3v7l2 4h-1l-1-2-6 5 6 1 10 5v1l-10-4h-5l-2 1h-3l-7-2-1 2 4 3 20 5 2 1 4-4 1-3 12 8-4 4 5 8z" opacity="1"/>
+        <g class="oblast-labels">
+            <text x="63" y="221" fill="#333" data-oblast="Святошинський"  font-size="19.4" >Святошинський</text>
+            <text x="180" y="178" fill="#333"  data-oblast="Подільський" font-size="14.6" >Подільський</text>
+            <text x="221" y="305" fill="#333"  data-oblast="Соломянський" font-size="13" >Солом'янський</text>
+            <text x="165" y="112" fill="#333"  data-oblast="Оболонський" font-size="20.1" >Оболонський</text>
+            <text x="212" y="238" fill="#333"  data-oblast="Шевченківський" font-size="13" >Шевченківський</text>
+            <text x="267" y="388" fill="#333"  data-oblast="Голосіївський" font-size="18.3" >Голосіївський</text>
+            <text x="452" y="355" fill="#333"  data-oblast="Дарницький" font-size="18.3" >Дарницький</text>
+            <text x="430" y="178" fill="#333"  data-oblast="Деснянський" font-size="18.3" >Деснянський</text>
+
+            <text x="406" y="287" fill="#333"  data-oblast="Дніпровський" font-size="14.4" >Дніпровський</text>
+            <text x="328" y="306" fill="#333"  data-oblast="Печерський" font-size="9.8" >Печерський</text>
+        </g>
+    </svg>
+</div>
+<canvas></canvas>
+</body>
+</html>

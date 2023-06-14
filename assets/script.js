@@ -3,7 +3,8 @@ $(function () {
     var $regions = $("#map #oblasts > path");
     var $regionsWithLabels = $("#map #oblasts > path, #map .oblast-labels text");
     // var $labels = $("#map .regions  g > path , #map .regions  .label");
-    var DEFAULT_STROKE = {"stroke": "gray", "stroke-width": "2px"};
+    var isSmallMap =  $('#map svg.small').length > 0;
+    var DEFAULT_STROKE =  isSmallMap ? {"stroke": "rgb(200,200,200)", "stroke-width":  "1px"} : {"stroke": "gray", "stroke-width":  "2px"};
 
     function drawImageToCanvas(callback) {
         var svg = $("#map").clone();
