@@ -46,10 +46,13 @@ body {
     align-items: center;
 
 }
-
+#map .regions path, #map .regions polygon  {
+    pointer-events: fill;
+}
 #map .regions path, #map .regions polygon {
 
     cursor: pointer;
+    pointer-events: fill;
 }
 
 #map .regions path:hover, #map .regions polygon:hover {
