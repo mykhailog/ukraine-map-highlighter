@@ -46,7 +46,7 @@ body {
     align-items: center;
 
 }
-#map .regions path, #map .regions polygon  {
+#map  path, #map text  {
     pointer-events: fill;
 }
 #map .regions path, #map .regions polygon {
